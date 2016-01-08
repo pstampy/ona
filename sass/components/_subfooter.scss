@@ -1,0 +1,5 @@
+.l-region--subfooter {
+	@include span(full);
+	@include clearfix;
+	padding: 1em 0.5em;
+}

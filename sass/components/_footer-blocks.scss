@@ -1,0 +1,10 @@
+.l-footer {
+	@include clearfix;
+	@include bleed-x(100%);
+	&.top {
+			background-color: $white;
+	}
+	&.bottom {
+			background-color: $bottom-footer-background;
+	}
+}	

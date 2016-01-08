@@ -1,0 +1,10 @@
+.l-branding {
+	@include span(full);
+	margin-bottom: $vert-spacing-unit;
+}
+
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.l-branding {
+		@include span(first $tab-cols / 4 * 2 of $tab-cols);
+	}
+}

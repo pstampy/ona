@@ -1,0 +1,34 @@
+.footer-menu {
+	padding: 2em 0.5em 0.5em 0.5em;
+	& > .menu {
+		@include menu(
+			vertical,
+			left,
+			$footer-text,
+			$footer-hover-text,
+			underline);
+		.nolink {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.menu {
+			padding-left: 0;
+			margin-bottom: $vert-spacing-unit / 2;
+		}
+	}
+}
+
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.footer-menu {
+		@include span (last $tab-cols / 2);
+		& > .menu {
+			@include menu(
+				horizontal,
+				left,
+				$footer-text,
+				$footer-hover-text,
+				underline
+			);
+		}
+	}
+}

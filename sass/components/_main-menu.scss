@@ -1,0 +1,48 @@
+.l-main-menu {
+	@include span(full);
+	margin-bottom: $vert-spacing-unit;
+	.menu {
+		@include menu(
+			horizontal,
+			center,
+			$header-color,
+			$header-hover-color,
+			$header-active-color,
+			none,
+			$white,
+			$header-hover-background
+		);
+		> li > ul {
+			display: none;
+			visibility: hidden;
+		}
+		margin: 0 -5px;
+		& > li {
+			margin: 0 5px;
+			> a {
+				border: 1px solid transparent;
+			}
+			&.sfHover > a {
+				border: 1px solid $header-color;
+				@include border-bottom-radius(0);
+			}
+		}
+		.sf-depth-3 {
+			left: -0.5px; // Yep. Something to do with the borders.
+			top: -0.5px;
+		}
+		.sf-sub-indicator {
+			right: 6px;
+		}
+		a {
+			@include rhythm(0,0.5,0.5,0);
+			display: block;
+			& > .sf-sub-indicator {
+				top: 38%;
+			}
+		}
+	}
+}
+
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+}

@@ -1,0 +1,19 @@
+img, media {
+  max-width: 100%;
+}
+.osmplayer-default {
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+}
+
+video {
+	height: auto;
+}
+.youtube-container--responsive {
+	margin-bottom: 1.375em;
+}
+.node--media {
+	margin-bottom: 1.375em !important;
+}

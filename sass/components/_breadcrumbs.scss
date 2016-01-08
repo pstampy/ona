@@ -1,0 +1,12 @@
+#breadcrumbs {
+	@include span (full);
+	margin-bottom: $vert-spacing-unit;
+	ul {
+		margin: 0;
+		@include delimited-list('>');
+		@include adjust-font-size-to(14px);
+		li:after {
+			margin: 0 1em;
+		}
+	}
+}

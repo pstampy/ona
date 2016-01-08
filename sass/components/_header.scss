@@ -1,0 +1,13 @@
+.l-header-wrapper {
+	@include bleed-x(100%);
+	margin-bottom: $vert-spacing-unit;
+}
+.l-header {
+	@include container;
+}
+
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.l-header {
+		padding: 0.5em 0.5em 0 0.5em;
+	}
+}

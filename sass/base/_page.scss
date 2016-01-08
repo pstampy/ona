@@ -1,0 +1,11 @@
+.l-page {
+	@include container;
+	padding: 0.5em;
+	margin-top: $vert-spacing-unit;
+}
+
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.l-page {
+		padding: 0;
+	}
+}

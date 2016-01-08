@@ -1,0 +1,21 @@
+.l-footer-wrapper {
+	@include bleed-x(100%);
+	@include clearfix;
+	color: $footer-text;
+	strong {
+		color: $white;
+	}
+}
+
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.l-footer-wrapper {
+		.l-footer {
+			@include clearfix;
+			.site-logo {
+				@include span (first $tab-cols / 2 of $tab-cols);
+				padding-top: $vert-spacing-unit;
+				padding-bottom: $vert-spacing-unit;
+			}
+		}
+	}
+}

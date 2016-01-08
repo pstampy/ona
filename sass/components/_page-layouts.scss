@@ -1,0 +1,17 @@
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.left-column {
+		@include span(first $tab-cols / 3 of $tab-cols);
+	}
+	.centre-column {
+		@include span($tab-cols / 3 of $tab-cols);
+	}
+	.right-column {
+		@include span(last $tab-cols / 3 of $tab-cols);
+	}
+	.right-content {
+		@include span(last $tab-cols / 3 * 2 of $tab-cols);
+	}
+	.main-content {
+		@include clearfix;
+	}
+}

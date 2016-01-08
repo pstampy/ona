@@ -1,0 +1,8 @@
+.copyright-block {
+	@include rhythm(0,0.5,0.5,0);
+}
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.copyright-block {
+		@include span(first $tab-cols / 2 of $tab-cols);
+	}
+}

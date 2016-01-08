@@ -1,0 +1,14 @@
+.l-content {
+	@include container;
+	margin-bottom: 1.375em;
+}
+
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.l-content {
+		padding: 0 0.5em;
+		position: relative;
+		.l-content {
+			position: relative;
+		}
+	}
+}

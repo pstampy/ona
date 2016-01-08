@@ -1,0 +1,56 @@
+.search-form {
+	@include span (full);
+	margin-bottom: $vert-spacing-unit;
+	position: relative;
+	.form-item {
+		display: block;
+		margin-bottom: 0;
+		text-align: left;
+		input {
+			@include border-radius;
+			border: 3px solid $form-border;
+			height: 34px;
+			padding-left: 2.5em;
+			width: 100%;
+			&.form-autocomplete {
+				background-position: 98% 8px;
+				&.throbbing {
+					background-position-y: -13px;
+				}
+			}
+		}
+	}
+	.form-submit,
+	.form-actions input {
+		@include background(url("../images/search-icon.png"));
+		@include border-left-radius(5px);
+		background-color: transparent;
+		background-position: center center;
+		background-repeat: no-repeat;
+		border: none;
+		display: block;
+		height: 34px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 2em;
+		&:hover {
+			background-color: $form-border;
+		}
+	}
+	.form-submit {
+		top: 44px;
+	}
+	span.ds-search-highlight {
+		background-color: $white !important;
+		font-weight: bold !important;
+	}
+}
+
+.field--name-search-snippet {
+	margin-bottom: $vert-spacing-unit;
+}
+
+// Responsiveness
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+}

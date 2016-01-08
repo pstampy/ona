@@ -1,0 +1,35 @@
+.sub-footer-menu {
+	.menu {
+		margin: 0 -5px;
+		@include menu(
+			vertical,
+			center,
+			$sub-footer-text,
+			$sub-footer-hover-text,
+			$sub-footer-active-text,
+			underline
+		);
+		li {
+			margin: 0 5px;
+			a {
+				@include rhythm(0,0.5,0.5,0);
+				display: block;
+			}
+		}
+	}
+}
+
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.sub-footer-menu {
+		@include span(last $tab-cols / 2 of $tab-cols);
+		.menu {
+			@include menu(
+				horizontal,
+				center,
+				$sub-footer-text,
+				$sub-footer-hover-text,
+				underline
+			);
+		}
+	}
+}

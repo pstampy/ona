@@ -1,0 +1,78 @@
+//Vertical Rhythm settings
+
+$base-font-size: 16px;
+$base-line-height: 22px;
+@include establish-baseline;
+
+$font-family: "Gotham A", "Gotham B", arial, sans-serif;
+
+body {
+    font-family: $font-family;
+    color: $text-color;
+    font-weight: 300;
+}
+
+$bold-weight: 400;
+
+#{headers(all)} {
+    font-weight: $bold-weight;
+}
+
+// The Rhythm mixin takes 5 variables: leader (top margin),
+// padding-leader (top padding), padding-trailer (bottom-padding)
+// trailer (bottom margin) and the font size. These are given as units of
+// the base line height given in the VR settings.
+
+h1 {
+    @include adjust-font-size-to(28px);
+    @include rhythm(0, 0, 0, 0.5);
+    .front & {
+        text-align: center;
+    }
+}
+h2:not(.element-invisible) {
+    @include adjust-font-size-to(24px);
+    @include rhythm(1, 0, 0, 0.5);
+}
+h3 {
+    @include adjust-font-size-to(20px);
+    @include rhythm(0, 0, 0, 0.5);
+    &.pane-title {
+        @include rhythm(0,0,0,0.5);
+        @include adjust-font-size-to(16px);
+    }
+}
+h4 {
+    @include adjust-font-size-to(18px);
+    @include rhythm(1, 0, 0, 0.5);
+}
+
+li {
+    @include adjust-font-size-to($base-font-size);
+    @include rhythm(0, 0, 0, 0);
+    .front .right-column & {
+        @include adjust-font-size-to(14px);
+    }
+}
+
+a {
+    @include link($link-color, $text-hover-color);
+}
+
+p,
+label {
+    @include adjust-font-size-to($base-font-size);
+    @include rhythm(0, 0, 0, 1);
+    .front .right-column & {
+        @include adjust-font-size-to(14px);
+    }
+    color: $black;
+}
+
+strong {
+    font-weight: $bold-weight;
+}
+
+em {
+    font-style: italic;
+}

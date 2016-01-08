@@ -1,0 +1,22 @@
+.news-events {
+	margin-bottom: $vert-spacing-unit;
+	.more-link {
+		a {
+			@include button($grey80)
+		}
+	}
+	.events-list-item {
+		@include clearfix;
+		margin-bottom: $vert-spacing-unit/2;
+		.date-display-single {
+			@include span(first 2 of 7);
+			text-transform: uppercase;
+			font-weight: bold;
+			font-style: normal;
+		}
+		p {
+			@include span(last 5 of 7);
+			margin-bottom: 0.8em;
+		}
+	}
+}

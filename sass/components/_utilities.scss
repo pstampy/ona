@@ -1,0 +1,11 @@
+.l-utilities {
+	@include span(full);
+	margin-bottom: $vert-spacing-unit;
+}
+
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.l-utilities {
+		@include span(last $tab-cols / 3 of $tab-cols);
+		margin-top: 3em;
+	}
+}

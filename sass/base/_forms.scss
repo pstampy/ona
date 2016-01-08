@@ -1,0 +1,54 @@
+$select-arrow: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0LjgzIDE2LjQybDkuMTcgOS4xNyA5LjE3LTkuMTcgMi44MyAyLjgzLTEyIDEyLTEyLTEyeiIvPjxwYXRoIGQ9Ik0wLS43NWg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+PC9zdmc+';
+$select-padding: 3px;
+$mq: screen (-webkit-min-device-pixel-ratio:0);
+ 
+select {
+  @include border-radius(0);
+  @include appearance(none);
+  cursor: pointer;
+  padding: $select-padding $select-padding * 2;
+  width: 100%;
+  @include background(url(#{$select-arrow}));
+  background-repeat: no-repeat;
+  background-position: right 0 top 50%;
+
+}
+.views-exposed-form {
+	.views-exposed-widgets {
+		margin-bottom: $vert-spacing-unit;
+		.views-submit-button, .views-reset-button {
+			@include span(full);
+			padding: 0;
+			margin-top: 0.55em;
+			input {
+				//@include sassy-button("flat", 5px, 14px, $header-color);
+				width: 100%;
+			}
+		}
+		.form-submit {
+			margin-top: 1.5em;
+		}
+		.form-select {
+			min-width: 5.5em;
+		}
+	}
+}
+@include susy-breakpoint($bp-tablet, $tab-cols) {
+	.views-exposed-form {
+		padding-top: $vert-spacing-unit / 2;
+		.views-exposed-widgets {
+			
+			.views-submit-button, .views-reset-button {
+				@include span(1.5 of $tab-cols);
+				padding: 0;
+				margin-top: 0.55em;
+				input {
+					//@include sassy-button("flat", 5px, 14px, $header-color);
+				}
+			}
+			.form-submit {
+				margin-top: 1.5em;
+			}
+		}
+	}
+}
