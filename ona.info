@@ -1,0 +1,31 @@
+name = Office of Northern Australia
+description = Theme for the Office of Northern Australia site.
+base theme = industry_growth_network
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = css/ona.reset.css
+stylesheets[all][] = css/ona.styles.css
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = js/ona.behaviors.js
+
+; ========================================
+; Regions
+; ========================================
+regions[header] = Header
+regions[navigation] = Navigation
+regions[content] = Content
+regions[footer] = Footer
+regions[subfooter] = Sub footer
+
+; ========================================
+; Plugins
+; ========================================
+plugins[panels][layouts] = panels/layouts
